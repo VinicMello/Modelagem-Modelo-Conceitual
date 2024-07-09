@@ -1,8 +1,9 @@
-# Overview Modelo Conceitual + Projeto Loja de Livros
+# Overview Modelo Conceitual
 
 ## MER (Modelo Entidade Relacionamento)
 Utilizado para descrever os objetos do mundo real através de **entidades**, com suas propriedades que são os **atributos** e os seus **relacionamentos**.
 
+![alt text](imgs/modelagem-oficial.png)
 
 ## Entidades
 Um objeto do mundo real e que possuem uma existência independente.
@@ -20,7 +21,7 @@ Dependem de outras entidades para existir, ou seja, elas não possuem existênci
 ![alt text](imgs/modelagem-entidades-fracas.png)
 
 #### Entidades Associativas
-Utilizadas quando existe a necessidade de associar uma entidade a um relacionamento.
+Utilizadas quando existe a necessidade de associar uma **entidade a um relacionamento**. Geralmente quando temos um relacionamento **N:N**, transformamos esse relacionamento em uma entidade, pois ele representa um fato.
 
 ![alt text](imgs/modelagem-entidade-associativa.png)
 
@@ -45,7 +46,7 @@ Descrevem as propriedades das entidades.
 Atributos simples são indivisíveis, ou seja, são atributos atômicos, um exemplo seria o atributo CPF.
 
 #### Atributos Composto
-Podem ser divididos em partes menores, que representam outros atributos, como o atributo endereço.
+Podem ser divididos em partes menores, que representam outros atributos, como o atributo endereço (Rua, Número, Bairro, Cidade, CEP...).
 
 #### Atributo Multivalorado
 Um atributo Multivalorado pode ter um ou N(vários) valores associados a ele, como, por exemplo, o atributo telefone.
@@ -55,6 +56,9 @@ Dependem de outro atributo ou até mesmo outra entidade para existir, como, por 
 
 #### Atributo Chave
 O atributo chave é utilizado para identificar de forma única uma entidade (ID).
+
+#### Atributos de Especialização
+São atributos que pertencem a subentidades em um relacionamento de especialização. A entidade Cliente pode ter subentidades como Pessoa Física e Pessoa Jurídica. Pessoa Física tem atributos específicos que não se aplicam à entidade Pessoa Jurídica, e vice-versa.
 
 ![alt text](imgs/modelagem-atributos.png)
 
